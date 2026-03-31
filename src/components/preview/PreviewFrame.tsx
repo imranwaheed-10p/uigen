@@ -8,12 +8,28 @@ import {
 } from "@/lib/transform/jsx-transformer";
 import { AlertCircle } from "lucide-react";
 
-export function PreviewFrame() {
+interface PreviewFrameProps {
+  isResizing?: boolean;
+}
+
+export function PreviewFrame({ isResizing }: PreviewFrameProps) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const { getAllFiles, refreshTrigger } = useFileSystem();
   const [error, setError] = useState<string | null>(null);
   const [entryPoint, setEntryPoint] = useState<string>("/App.jsx");
   const [isFirstLoad, setIsFirstLoad] = useState(true);
+  const [iframeHasFocus, setIframeHasFocus] = useState(false);
+
+  useEffect(() => {
+    const onBlur = () => setIframeHasFocus(true);
+    const onFocus = () => setIframeHasFocus(false);
+    window.addEventListener("blur", onBlur);
+    window.addEventListener("focus", onFocus);
+    return () => {
+      window.removeEventListener("blur", onBlur);
+      window.removeEventListener("focus", onFocus);
+    };
+  }, []);
 
   useEffect(() => {
     const updatePreview = () => {
@@ -151,10 +167,18 @@ export function PreviewFrame() {
   }
 
   return (
-    <iframe
-      ref={iframeRef}
-      className="w-full h-full border-0 bg-white"
-      title="Preview"
-    />
+    <div className="relative w-full h-full">
+      <iframe
+        ref={iframeRef}
+        className="w-full h-full border-0 bg-white"
+        title="Preview"
+      />
+      {(isResizing || iframeHasFocus) && (
+        <div
+          className="absolute inset-0"
+          onPointerDown={() => setIframeHasFocus(false)}
+        />
+      )}
+    </div>
   );
 }
