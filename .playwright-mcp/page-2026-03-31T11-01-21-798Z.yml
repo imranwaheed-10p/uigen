@@ -1,0 +1,95 @@
+- generic [ref=e1]:
+  - generic [ref=e3]:
+    - generic [ref=e5]:
+      - heading "React Component Generator" [level=1] [ref=e7]
+      - generic [ref=e9]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e57]: Create a simple card component with a title, description, and a button
+            - img [ref=e60]
+          - generic [ref=e63]:
+            - img [ref=e66]
+            - generic [ref=e71]:
+              - generic [ref=e72]:
+                - img [ref=e74]
+                - img [ref=e78]
+                - generic [ref=e81]: Creating App.jsx
+              - separator [ref=e82]
+              - generic [ref=e83]:
+                - img [ref=e85]
+                - img [ref=e89]
+                - generic [ref=e92]: Creating Card.jsx
+              - separator [ref=e93]
+              - paragraph [ref=e95]: Done! Created a Card component with title, description, and button. The App.jsx demonstrates it with sample content.
+        - generic [ref=e20]:
+          - textbox "Describe the React component you want to create..." [ref=e21]
+          - button [disabled] [ref=e22]:
+            - img [ref=e23]
+    - separator [ref=e26]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - tablist [ref=e31]:
+          - tab "Preview" [ref=e32]
+          - tab "Code" [active] [selected] [ref=e33]
+        - generic [ref=e34]:
+          - button "Sign In" [ref=e35]
+          - button "Sign Up" [ref=e36]
+      - generic [ref=e97]:
+        - generic [ref=e103]:
+          - generic [ref=e104]:
+            - generic [ref=e105] [cursor=pointer]:
+              - img [ref=e106]
+              - img [ref=e108]
+              - generic [ref=e110]: components
+            - generic [ref=e113] [cursor=pointer]:
+              - img [ref=e114]
+              - generic [ref=e119]: Card.jsx
+          - generic [ref=e121] [cursor=pointer]:
+            - img [ref=e122]
+            - generic [ref=e127]: App.jsx
+        - separator [ref=e128]
+        - code [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e136]:
+              - generic [ref=e139]: "1"
+              - generic [ref=e141]: "2"
+              - generic [ref=e142]:
+                - generic [ref=e143] [cursor=pointer]: 
+                - generic [ref=e144]: "3"
+              - generic [ref=e145]:
+                - generic [ref=e146] [cursor=pointer]: 
+                - generic [ref=e147]: "4"
+              - generic [ref=e148]:
+                - generic [ref=e149] [cursor=pointer]: 
+                - generic [ref=e150]: "5"
+              - generic [ref=e151]:
+                - generic [ref=e152] [cursor=pointer]: 
+                - generic [ref=e153]: "6"
+              - generic [ref=e155]: "7"
+              - generic [ref=e157]: "8"
+              - generic [ref=e159]: "9"
+              - generic [ref=e161]: "10"
+              - generic [ref=e163]: "11"
+              - generic [ref=e165]: "12"
+              - generic [ref=e167]: "13"
+              - generic [ref=e169]: "14"
+              - generic [ref=e171]: "15"
+            - generic [ref=e217]:
+              - generic [ref=e219]: import Card from '@/components/Card';
+              - generic [ref=e222]: "export default function App() {"
+              - generic [ref=e224]: return (
+              - generic [ref=e226]: <div className="flex items-center justify-center min-h-screen bg-gray-100">
+              - generic [ref=e228]: <Card
+              - generic [ref=e230]: title="Welcome"
+              - generic [ref=e232]: description="This is a simple card component with a title, description, and button."
+              - generic [ref=e234]: buttonText="Click Me"
+              - generic [ref=e236]: "onButtonClick={() => alert('Button clicked!')}"
+              - generic [ref=e238]: />
+              - generic [ref=e240]: </div>
+              - generic [ref=e242]: );
+              - generic [ref=e244]: "}"
+            - textbox "Editor content" [ref=e247]
+  - alert [ref=e47]
+  - generic [ref=e248]:
+    - alert
+    - alert
